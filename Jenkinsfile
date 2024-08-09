@@ -31,7 +31,7 @@ pipeline {
           steps {
             script {
               def content = readYaml file: 'binding-dev.yml'
-              content.each { 
+              content.source_topics.each { 
                 println it
               }
             }
