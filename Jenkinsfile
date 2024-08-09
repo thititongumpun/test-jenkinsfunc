@@ -31,7 +31,7 @@ pipeline {
           steps {
             script {
               def content = readYaml file: 'binding-dev.yml'
-              println content.key
+              println content.source_topics == null
               // for (entry in content) {
                 // if (entry.key == 'source_topics') {
                 //   println 'no key found'
