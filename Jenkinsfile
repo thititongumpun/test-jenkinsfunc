@@ -31,12 +31,12 @@ pipeline {
           steps {
             script {
               def content = readYaml file: 'binding-dev.yml'
-              for (entry in content) {
-                println entry.key
-                if (entry.key == 'source_topics') {
-                  println 'no key found'
-                }
-              }
+              println content.key
+              // for (entry in content) {
+                // if (entry.key == 'source_topics') {
+                //   println 'no key found'
+                // }
+              // }
               println content.source_topics
               println content.source_topics.getClass()
               // content.source_topics.each { 
