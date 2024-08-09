@@ -32,7 +32,7 @@ pipeline {
             script {
               def content = readYaml file: 'binding-dev.yml'
               for (entry in content) {
-                println entry
+                println entry.key
               }
               println content.source_topics
               println content.source_topics.getClass()
