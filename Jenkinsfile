@@ -11,7 +11,7 @@ pipeline {
                     println filesDir
                     println filesDir == ''
                     println filesArr.getClass()
-                    println filesArr.length == 0
+                    println filesArr.size() == 0
                 }
             }
         }
