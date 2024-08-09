@@ -33,6 +33,9 @@ pipeline {
               def content = readYaml file: 'binding-dev.yml'
               for (entry in content) {
                 println entry.key
+                if (entry.data1 == null) {
+                  println 'no key found'
+                }
               }
               println content.source_topics
               println content.source_topics.getClass()
