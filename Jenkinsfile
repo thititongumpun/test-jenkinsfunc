@@ -35,12 +35,9 @@ pipeline {
                 if (entry.key != 'source_topics') {
                   println 'no key found'
                 }
+
+                println entry.value
               }
-              println content.source_topics
-              println content.source_topics.getClass()
-              // content.source_topics.each { 
-              //   println it
-              // }
             }
           }
         }
