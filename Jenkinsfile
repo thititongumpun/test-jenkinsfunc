@@ -31,9 +31,11 @@ pipeline {
           steps {
             script {
               def content = readYaml file: 'binding-dev.yml'
-              content.source_topics.each { 
-                println it
-              }
+              println content.source_topics
+              println content.source_topics.getClass()
+              // content.source_topics.each { 
+              //   println it
+              // }
             }
           }
         }
