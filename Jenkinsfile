@@ -8,6 +8,8 @@ pipeline {
                     def files = findFiles(glob: 'deploy/*.sql')
                     def filesDir = files.join(',')
                     println filesDir
+                    println filesDir == ''
+                    println filesDir.getClass()
                 }
             }
         }
