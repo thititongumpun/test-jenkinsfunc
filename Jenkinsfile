@@ -7,7 +7,7 @@ pipeline {
                 script {
                     def files = findFiles(glob: 'deploy/*.sql')
                     def filesDir = files.join(',')
-                    println files
+                    println filesDir
                 }
             }
         }
