@@ -6,10 +6,12 @@ pipeline {
             steps {
                 script {
                     def files = findFiles(glob: 'deploy/*.sql')
-                    def filesArr = files.join(',').tokenize(',')
+                    def filesArr = files.join(',')
+                    def filesToken = filesArr.tokenize(',')
 
-                    print files.getClass()
+                    println files.getClass()
                     println filesArr.getClass()
+                    println filesToken.getClass()
                     if (filesArr.size() == 0) {
                       println 'empty array'
                     }
