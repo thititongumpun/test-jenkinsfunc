@@ -8,6 +8,8 @@ pipeline {
                     def files = findFiles(glob: 'deploy/*.sql')
                     def filesArr = files.join(',').tokenize(',')
 
+                    print files.getClass()
+                    println filesArr.getClass()
                     if (filesArr.size() == 0) {
                       println 'empty array'
                     }
